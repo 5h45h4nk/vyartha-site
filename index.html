@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Vyartha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@300;400&family=Noto+Sans+Devanagari:wght@300;400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       background: black;
       color: white;
-      font-family: Arial, sans-serif;
 
       display: flex;
       justify-content: center;
@@ -18,13 +23,44 @@
 
       height: 100vh;
 
-      font-size: 3rem;
-      letter-spacing: 2px;
+      overflow: hidden;
     }
 
-    .fade {
+    .container {
+      text-align: center;
+    }
+
+    .devanagari {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 4.5rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .kannada {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 4rem;
+      font-weight: 300;
+
+      margin-top: 1rem;
+
       opacity: 0;
       animation: fadeIn 3s ease forwards;
+    }
+
+    .english {
+      font-family: 'Inter', sans-serif;
+
+      margin-top: 2rem;
+
+      font-size: 1rem;
+      letter-spacing: 10px;
+
+      opacity: 0;
+      animation: fadeIn 4s ease forwards;
     }
 
     @keyframes fadeIn {
@@ -36,8 +72,22 @@
 </head>
 
 <body>
-  <div class="fade">
-    Everything is vyartha.
+
+  <div class="container">
+
+    <div class="devanagari">
+      व्यर्थ
+    </div>
+
+    <div class="kannada">
+      ವ್ಯರ್ಥ
+    </div>
+
+    <div class="english">
+      VYARTHA
+    </div>
+
   </div>
+
 </body>
 </html>
